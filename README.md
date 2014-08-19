@@ -6,3 +6,32 @@ art.doArt();
 
 Create a custom text to ascii art:
 AsciiArt art = new AsciiArt();
+String asciiartString = art.
+					setText("IVAN").
+					setWidth(100).
+					setHeight(30).
+					setFont(new Font(AsciiArt.FONT_SANSSERIF, Font.BOLD, 24)).
+					setTextWidth(15).
+					setTextHeight(22).
+					setBackgroundSymbol("8").
+					setTextSymbol("1").
+					doArt();
+					
+Create a PNG file:
+art.
+					setText("PEPE").
+					setWidth(100).
+					setHeight(30).
+					setFont(new Font(AsciiArt.FONT_SANSSERIF, Font.BOLD, 24)).
+					setTextWidth(15).
+					setTextHeight(22).
+					setBackgroundSymbol("8").
+					setTextSymbol("1").
+					setFileOut(new File("/Users/jmprieto/Downloads/prueba1.png")).
+					doArt();
+					
+Overwrite a image with some text:
+art.
+					setFileIn(new File("src/test/resources/facebook.jpg")).
+					setFileOut(new File("src/test/resources/prueba1.png")).
+					doArt();
