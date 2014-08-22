@@ -48,15 +48,35 @@ public class AsciiArtTest {
 		try {
 			String asciiartString = art.
 					setText("IVAN").
-					setWidth(100).
-					setHeight(30).
+					setWidth(70).
+					setHeight(20).
 					setFont(new Font(AsciiArt.FONT_SANSSERIF, Font.BOLD, 24)).
-					setTextWidth(15).
-					setTextHeight(22).
+					setTextWidth(2).
+					setTextHeight(19).
 					setBackgroundSymbol("8").
 					setTextSymbol("1").
 					doArt();
-			System.out.println("customTest(): " + asciiartString);
+			System.out.println("customTest(): \n" + asciiartString);
+			assertTrue(true);
+		} catch (Exception e) {
+			assertFalse(false);
+		}
+	}
+
+	@Test
+	public void customTestMini() {
+		try {
+			String asciiartString = art.
+					setText("IVAN").
+					setWidth(35).
+					setHeight(12).
+					setFont(new Font(AsciiArt.FONT_SANSSERIF, Font.BOLD, 12)).
+					setTextWidth(2).
+					setTextHeight(10).
+					setBackgroundSymbol("8").
+					setTextSymbol("*").
+					doArt();
+			System.out.println("customTest(): \n" + asciiartString);
 			assertTrue(true);
 		} catch (Exception e) {
 			assertFalse(false);
@@ -75,7 +95,7 @@ public class AsciiArtTest {
 					setTextHeight(22).
 					setBackgroundSymbol("8").
 					setTextSymbol("1").
-					setFileOut(new File("/Users/jmprieto/Downloads/prueba1.png")).
+					setFileOut(new File("src/test/resources/pruebaTextToIma.png")).
 					doArt();
 			System.out.println("toFileTest(): " + asciiartString);
 			assertTrue(true);
@@ -83,13 +103,13 @@ public class AsciiArtTest {
 			assertFalse(false);
 		}
 	}
-	
+
 	@Test
 	public void overwriteImageTest() {
 		try {
 			String asciiartString = art.
 					setFileIn(new File("src/test/resources/facebook.jpg")).
-					setFileOut(new File("src/test/resources/prueba1.png")).
+					setFileOut(new File("src/test/resources/pruebaFacebook.png")).
 					doArt();
 			System.out.println("overwriteImageTest(): " + asciiartString);
 			assertTrue(true);
