@@ -79,7 +79,7 @@ setTextSymbol("1").
 setFileOut(new File("/Users/jmprieto/Downloads/prueba1.png")).
 doArt();
 ```
-![alt text](https://github.com/prietopa/ascii.art/blob/master/src/test/resources/prueba1.png "prueba1")
+![alt text](https://github.com/prietopa/ascii.art/blob/master/src/test/resources/pruebaTextToIma.png "pruebaTextToIma")
 
 4.- **Overwrite a image with some text**:
 ```java
@@ -89,4 +89,4 @@ setFileIn(new File("src/test/resources/facebook.jpg")).
 setFileOut(new File("src/test/resources/prueba1.png")).
 doArt();
 ```
-![alt text](https://github.com/prietopa/ascii.art/blob/master/src/test/resources/prueba1.png "prueba1")
+![alt text](https://github.com/prietopa/ascii.art/blob/master/src/test/resources/pruebaFacebook.png "pruebaFacebook")
