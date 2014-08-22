@@ -1,4 +1,6 @@
+***
 This code allows you to enter any text in ascii characters. You can define the margins of the resulting image. Just as the margins of the text within the image. Actions with images are outside the target, but your chances are given.
+***
 
 ######Show [unit test](https://github.com/prietopa/ascii.art/blob/master/src/test/java/net/pp/jm/ascii/art/AsciiArtTest.java) to show how it runs.
 
