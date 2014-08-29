@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Ascii.art by prietopa</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Ascii.art</h1>
+          <h2>text to ascii art</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/prietopa/ascii.art/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/prietopa/ascii.art/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/prietopa/ascii.art" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <hr><p>This code allows you to enter any text in ascii characters. You can define the margins of the resulting image. Just as the margins of the text within the image. Actions with images are outside the target, but your chances are given.</p>
+
+<p>Example: IVAN</p>
+
+<pre><code>88888888888888888888888888888888888
+888**8***888***88***8888***88***888
+888**8***888**88*****888***88***888
+888**8****8***88*****888****8***888
+888**88***8***88*****888********888
+888**88***8**88***8***88********888
+888**88******88*******88**8*****888
+888**888*****8********88**8*****888
+888**888****88***888***8**88****888
+888**8888***88**8888***8**88****888
+88888888888888888888888888888888888
+</code></pre>
+
+<hr><h6>
+<a name="show-unit-test-to-show-how-it-runs" class="anchor" href="#show-unit-test-to-show-how-it-runs"><span class="octicon octicon-link"></span></a>Show <a href="https://github.com/prietopa/ascii.art/blob/master/src/test/java/net/pp/jm/ascii/art/AsciiArtTest.java">unit test</a> to show how it runs.</h6>
+
+<p>1.- <strong>Show a default text to ascii art</strong>:</p>
+
+<div class="highlight highlight-java"><pre><span class="n">AsciiArt</span> <span class="n">art</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">AsciiArt</span><span class="o">();</span>
+<span class="n">art</span><span class="o">.</span><span class="na">doArt</span><span class="o">();</span>
+</pre></div>
+
+<p>2.- <strong>Create a custom text to ascii art</strong>:</p>
+
+<div class="highlight highlight-java"><pre>    <span class="n">AsciiArt</span> <span class="n">art</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">AsciiArt</span><span class="o">();</span>
+    <span class="n">String</span> <span class="n">asciiartString</span> <span class="o">=</span> <span class="n">art</span><span class="o">.</span>
+    <span class="nf">setText</span><span class="o">(</span><span class="s">"IVAN"</span><span class="o">).</span>
+    <span class="n">setWidth</span><span class="o">(</span><span class="mi">70</span><span class="o">).</span>
+    <span class="n">setHeight</span><span class="o">(</span><span class="mi">20</span><span class="o">).</span>
+    <span class="n">setFont</span><span class="o">(</span><span class="k">new</span> <span class="nf">Font</span><span class="o">(</span><span class="n">AsciiArt</span><span class="o">.</span><span class="na">FONT_SANSSERIF</span><span class="o">,</span> <span class="n">Font</span><span class="o">.</span><span class="na">BOLD</span><span class="o">,</span> <span class="mi">24</span><span class="o">)).</span>
+    <span class="n">setTextWidth</span><span class="o">(</span><span class="mi">2</span><span class="o">).</span>
+    <span class="n">setTextHeight</span><span class="o">(</span><span class="mi">19</span><span class="o">).</span>
+    <span class="n">setBackgroundSymbol</span><span class="o">(</span><span class="s">"8"</span><span class="o">).</span>
+    <span class="n">setTextSymbol</span><span class="o">(</span><span class="s">"1"</span><span class="o">).</span>
+    <span class="n">doArt</span><span class="o">();</span>
+</pre></div>
+
+<p>Example:</p>
+
+<pre><code>8888888888888888888888888888888888888888888888888888888888888888888888
+8888111188111118888888811118888881111188888888811118888888111188888888
+8888111188111118888888811118888881111118888888811111888888111188888888
+8888111188111118888888811188888881111118888888811111888888111188888888
+8888111188811111888888111188888811111118888888811111188888111188888888
+8888111188811111888888111188888811111111888888811111118888111188888888
+8888111188811111188888111888888111111111888888811111118888111188888888
+8888111188881111188881111888888111181111188888811111111888111188888888
+8888111188881111188881111888888111181111188888811111111188111188888888
+8888111188888111118811118888881111881111188888811111111188111188888888
+8888111188888111118811118888881111888111118888811118111118111188888888
+8888111188888111118811118888881118888111118888811118111111111188888888
+8888111188888811111111188888811111111111118888811118811111111188888888
+8888111188888811111111188888811111111111111888811118881111111188888888
+8888111188888811111111188888111111111111111888811118881111111188888888
+8888111188888881111111888888111188888881111188811118888111111188888888
+8888111188888881111111888888111188888881111188811118888811111188888888
+8888111188888888111118888881111888888881111188811118888811111188888888
+8888111188888888111118888881111888888888111118811118888881111188888888
+8888888888888888888888888888888888888888888888888888888888888888888888
+</code></pre>
+
+<p>3.- <strong>Create a PNG file</strong>:</p>
+
+<div class="highlight highlight-java"><pre><span class="n">AsciiArt</span> <span class="n">art</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">AsciiArt</span><span class="o">();</span>
+<span class="n">art</span><span class="o">.</span>
+<span class="nf">setText</span><span class="o">(</span><span class="s">"PEPE"</span><span class="o">).</span>
+<span class="n">setWidth</span><span class="o">(</span><span class="mi">100</span><span class="o">).</span>
+<span class="n">setHeight</span><span class="o">(</span><span class="mi">30</span><span class="o">).</span>
+<span class="n">setFont</span><span class="o">(</span><span class="k">new</span> <span class="nf">Font</span><span class="o">(</span><span class="n">AsciiArt</span><span class="o">.</span><span class="na">FONT_SANSSERIF</span><span class="o">,</span> <span class="n">Font</span><span class="o">.</span><span class="na">BOLD</span><span class="o">,</span> <span class="mi">24</span><span class="o">)).</span>
+<span class="n">setTextWidth</span><span class="o">(</span><span class="mi">15</span><span class="o">).</span>
+<span class="n">setTextHeight</span><span class="o">(</span><span class="mi">22</span><span class="o">).</span>
+<span class="n">setBackgroundSymbol</span><span class="o">(</span><span class="s">"8"</span><span class="o">).</span>
+<span class="n">setTextSymbol</span><span class="o">(</span><span class="s">"1"</span><span class="o">).</span>
+<span class="n">setFileOut</span><span class="o">(</span><span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="s">"/Users/jmprieto/Downloads/prueba1.png"</span><span class="o">)).</span>
+<span class="n">doArt</span><span class="o">();</span>
+</pre></div>
+
+<p><img src="https://github.com/prietopa/ascii.art/blob/master/src/test/resources/pruebaTextToIma.png" alt="alt text" title="pruebaTextToIma"></p>
+
+<p>4.- <strong>Overwrite a image with some text</strong>:</p>
+
+<div class="highlight highlight-java"><pre><span class="n">AsciiArt</span> <span class="n">art</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">AsciiArt</span><span class="o">();</span>
+<span class="n">art</span><span class="o">.</span>
+<span class="nf">setFileIn</span><span class="o">(</span><span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="s">"src/test/resources/facebook.jpg"</span><span class="o">)).</span>
+<span class="n">setFileOut</span><span class="o">(</span><span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="s">"src/test/resources/prueba1.png"</span><span class="o">)).</span>
+<span class="n">doArt</span><span class="o">();</span>
+</pre></div>
+
+<p><img src="https://github.com/prietopa/ascii.art/blob/master/src/test/resources/pruebaFacebook.png" alt="alt text" title="pruebaFacebook"></p>
+        </section>
+
+        <footer>
+          Ascii.art is maintained by <a href="https://github.com/prietopa">prietopa</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
